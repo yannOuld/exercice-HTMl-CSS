@@ -1,0 +1,160 @@
+body,
+html,
+main {
+  width: 100%;
+  margin: 0;
+}
+
+html {
+  background: url("../img/congruent_pentagon.png");
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+.container {
+  margin: auto;
+  width: 70vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.8);
+  position: relative;
+  color: #fff;
+  height: 300px;
+  width: 300px;
+  margin: 15px auto;
+}
+.cards__img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.cards__layout {
+  opacity: 0;
+  position: absolute;
+  padding: 15px;
+}
+
+.cards__nav {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  margin: auto;
+}
+
+.cards__nav--orange {
+  font-size: 30px;
+}
+.cards__nav--orange,
+.join__link--orange {
+  color: orange;
+}
+
+.cards:hover > .cards__img,
+.cards:focus > .cards__img {
+  filter: blur(1.2rem);
+}
+.cards:hover > .cards__layout,
+.cards:focus > .cards__layout {
+  opacity: 1;
+  filter: contrast(2);
+}
+.form__control {
+  margin: 10px;
+  width: 100%;
+}
+.form,
+.form__btn,
+.join,
+fieldset,
+.file {
+  margin: auto;
+}
+.form,
+.form__control,
+.form__layout {
+  display: flex;
+}
+.form,
+.form__layout {
+  flex-direction: column;
+}
+.form {
+  margin-top: 20px;
+  background-color: white;
+  border: solid 2px black;
+  border-radius: 15px;
+  padding: 10px;
+  width: 40vw;
+  justify-content: center;
+  align-items: center;
+}
+.form__layout,
+.form__control {
+  justify-content: space-between;
+}
+
+.form__layout {
+  width: 70%;
+}
+
+.form__input {
+  width: calc(100% - 100px);
+}
+.form__btn {
+  width: 150px;
+  color: white;
+  background-color: rgb(32, 61, 34);
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.file {
+  background-color: palegreen;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  border: 1px solid black;
+}
+.file__label {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+.file__label:hover {
+  color: #25a5c4;
+}
+.file__input {
+  display: none;
+}
+.form__text {
+  resize: none;
+}
+.join {
+  width: 80vw;
+  padding: 20px;
+  color: White;
+
+  background-color: rgb(32, 61, 34);
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+  }
+  .form__layout {
+    width: 90%;
+  }
+  .form {
+    width: 90vw;
+    justify-content: space-between;
+  }
+
+  .form__control--checkbox {
+    display: flex;
+    flex-direction: column;
+  }
+}
